@@ -1,0 +1,246 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    display: flex;
+}
+
+:root {
+    --primary-color: #1b3b6f;
+    --secondary-color: #ffc107;
+    --background-light: #fdf8f0;
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-family: Arial, sans-serif;
+    transition: background 0.3s;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    width: 20vw;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    height: 100vh;
+    position: relative;
+    padding: 15px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.nav-group {
+    margin-bottom: 20px;
+}
+
+.nav-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.nav-item {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--text-light);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main Content */
+.main-content {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* User Actions */
+.user-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Improved Scheme Card */
+.scheme-card {
+    background: #fff;
+    border-left: 5px solid var(--primary-color);
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.scheme-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scheme-card-header h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.scheme-meta {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.scheme-card-body {
+    margin-top: 10px;
+}
+
+/* Benefits Section */
+.scheme-benefits h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+.scheme-benefits ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.scheme-benefits ul li {
+    font-size: 14px;
+    color: var(--text-dark);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.scheme-benefits ul li::before {
+    content: "✔";
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Read More Button */
+.action-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: none;
+}
+
+.action-btn:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-light);
+}
+
+body.dark-mode .scheme-card {
+    background: #1e1e1e;
+    color: var(--text-light);
+    border-left: 5px solid var(--secondary-color);
+}
+
+body.dark-mode .scheme-card-header h3 {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .scheme-meta {
+    color: #bbb;
+}
+
+body.dark-mode .scheme-card-body p {
+    color: var(--text-light);
+}
+
+body.dark-mode .scheme-benefits h4 {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .scheme-benefits ul li {
+    color: var(--text-light);
+}
+
+body.dark-mode .scheme-benefits ul li::before {
+    content: "✔";
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+body.dark-mode .action-btn {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode .action-btn:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+@font-face {
+    font-family: nue;
+    src: url("./NeueHaasDisplayMediu.ttf");
+}
+
+body{
+    font-family:nue;
+}
