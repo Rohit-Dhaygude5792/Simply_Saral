@@ -244,3 +244,7 @@ body.dark-mode .action-btn:hover {
 body{
     font-family:nue;
 }
+
+a{
+    text-decoration: none;
+}
