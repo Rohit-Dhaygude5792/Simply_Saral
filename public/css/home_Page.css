@@ -10,7 +10,7 @@ body{
     text-align: center;
     font-size: 4rem;
     font-weight: bold;
-    color: #0f6b84;
+    color: #1B3B6F;
     text-align: right;
     padding: 1rem 1rem;
     background-color:#EFEAE3 ;
@@ -49,6 +49,7 @@ nav img{
    font-weight: 600;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    overflow:hidden ; 
+   font-size:20px;
 }
 
 #nav-2 h4::after{
@@ -390,12 +391,12 @@ body {
 
 #window{
     background-color: transparent;
-    height: 50vh;
+    height: 40vh;
     min-width:100vw;
 }
 
 .footer {
-    background: #092e40;
+    background: #1B3B6F;
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -464,3 +465,55 @@ body {
 body{
     font-family:nue;
 }
+
+#gola{
+    height:70px;
+    width:70px;
+    border-radius: 50%;
+    background-color: #1B3B6F;
+    display:inline-block
+}
+
+#moving-text h1{
+    font-size: 9vw;
+    font-family: nue;
+    display: inline-block;
+    background-color:black;
+    color:#EFEAE3;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-direction:normal;
+}
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x:auto;
+    margin-bottom: 2vw;
+ }
+
+ #moving-text::-webkit-scrollbar{
+    display:none;
+ }
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#sch-img{
+    height: 100%;
+    width:30vw;
+    display: inline-block;
+}
+

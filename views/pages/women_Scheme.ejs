@@ -23,10 +23,10 @@
             </div>
             <div class="nav-group">
                 <div class="nav-header">Schemes</div>
-                <div class="nav-item active">📚 All Schemes</div>
+                <div class="nav-item active">📚 <%= name %></div>
                 <div class="sub-menu">
                     <% for (let scheme of data) {%>
-                    <div class="nav-item"><%=scheme.scheme_name%></div>
+                    <a href="/schemes/women_Welfare/<%=scheme._id%>"><div class="nav-item"><%=scheme.scheme_name%></div></a>
                     <% }%>
                 </div>
             </div>
@@ -35,11 +35,24 @@
         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
-                <h2>Welcome <span class="user-name">Citizen</span></h2>
+                <h2><span class="user-name"></span></h2>
                 <div class="user-actions">
                     <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
                 </div>
             </div>
+
+            <div class="user-dashboard">
+                <div class="carousel">
+                  <div class="carousel-slide active" style="background-image: url('/Image/beti_Bachao.jpg')">
+                  </div>
+                  <div class="carousel-slide" style="background-image: url('/Image/beti_Bachao.webp')">
+                  </div>
+                  <div class="carousel-slide" style="background-image: url('/Image/pm_Kisan_Samman.jpg')">
+                  </div>
+                  <div class="carousel-slide" style="background-image: url('/Image/pradhan_Mantri_Fasal.jpg')">
+                  </div>
+                </div>
+              </div>
 
             <!-- Improved Scheme Card -->
             <% data.forEach((scheme)=>{%>

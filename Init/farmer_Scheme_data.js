@@ -89,6 +89,161 @@ const Schemes=[{
     faq_section: "https://pmfby.gov.in/faqs",
     created_at: Date.now()
 },
+ {
+    title: "Pradhan Mantri Krishi Sinchayee Yojana",
+    description: "A scheme to improve irrigation efficiency and ensure water availability for agriculture",
+    launched_year: 2015,
+    eligibility_criteria: {
+        age_min: 18,
+        age_max: 75,
+        land_requirement_acres: 0.5,
+        repayment_capacity: "Based on irrigation project feasibility"
+    },
+    important_links: [
+        {
+            title: "Official Website",
+            url: "pmksy.gov.in"
+        },
+        {
+            title: "Government Guidelines PDF",
+            url: "PMKSY Guidelines"
+        }
+    ],
+    application_process: {
+        offline_steps: [
+            "Visit the nearest agriculture department office",
+            "Collect and fill out the PMKSY application form",
+            "Attach required documents (land records, Aadhaar, bank details)",
+            "Submit the form and wait for verification"
+        ],
+        online_steps: [
+            "Visit the official PMKSY website",
+            "Fill out the application form with details",
+            "Upload scanned copies of required documents",
+            "Submit the form and track status online"
+        ]
+    },
+    documents_required: ["Identity Proof", "Address Proof", "Land Ownership Proof", "Photographs", "Bank Account Details"],
+    loan_details: {
+        micro_irrigation_subsidy_general: 55,
+        micro_irrigation_subsidy_scst: 65,
+        watershed_funding: "Varies based on project",
+        drip_irrigation: "Subsidized loans and financial aid"
+    },
+    benefits: [
+        "More Crops Per Drop: Focus on efficient water use",
+        "Financial Assistance: Grants for micro-irrigation systems",
+        "Improved Irrigation Coverage: Expansion of irrigated land",
+        "Integration with Other Schemes: Linked with MNREGA, PM-KISAN, etc"
+    ],
+    special_provisions: {
+        dairy_farmers: true,
+        fisheries:true
+    },
+    helpline_numbers: {
+        toll_free: "1800-11-6181",
+        customer_service: ["Available on state agriculture department websites"]
+    },
+    research_insights: [
+        {
+            title: "Impact of PMKSY on Agriculture",
+            source: "Research papers on irrigation efficiency and water resource management"
+        }
+    ],
+    created_at: Date.now()
+},({
+    title: "PM Kisan Samman Nidhi Yojana",
+    description: "A government initiative to provide financial assistance to farmers across India. The program aims to help farmers meet their agricultural needs, including buying inputs like seeds, fertilizers, and other resources.",
+    launched_year: 2018,
+    
+    eligibility_criteria: {
+        age_min: 18,
+        age_max: 75,
+        land_requirement_acres: 4.94, // 2 hectares converted to acres
+    },
+    
+    important_links: [
+        {
+            title: "Official PM-Kisan Portal",
+            url: "https://pmkisan.gov.in/"
+        },
+        {
+            title: "PM-Kisan Scheme Guidelines",
+            url: "https://pmkisan.gov.in/Documents/PM-Kisan_Scheme_Guidelines.pdf"
+        },
+        {
+            title: "Beneficiary Status Check",
+            url: "https://pmkisan.gov.in/Rpt_BeneficiaryStatus_pub.aspx"
+        },
+        {
+            title: "Beneficiary Status Verification",
+            url: "https://fw.pmkisan.gov.in/beneficiarystatus.aspx"
+        }
+    ],
+    
+    application_process: {
+        offline_steps: [
+            "Visit nearest Common Service Center (CSC)",
+            "Visit local revenue department",
+            "Submit required documents",
+            "Complete verification process"
+        ],
+        online_steps: [
+            "Visit the official PM-Kisan Portal",
+            "Complete registration form",
+            "Submit necessary documents",
+            "Wait for verification by authorities",
+            "Receive approval and disbursement"
+        ]
+    },
+    
+    documents_required: ["Identity Proof", "Address Proof", "Land Ownership Proof", "Photographs", "Bank Account Details"],
+    
+    benefits: [
+        "Financial assistance of ₹6,000 annually",
+        "Direct transfer to bank accounts",
+        "Targeted support for small and marginal farmers",
+        "Enhanced agricultural productivity",
+        "Improved economic condition of farmers"
+    ],
+    
+    special_provisions: {
+        women_farmers: true,
+        e_kyc: true
+    },
+    
+    helpline_numbers: {
+        toll_free: "155261",
+        customer_service: ["011-24300606", "011-23381092"]
+    },
+    
+    support_email: "pmkisan-ict@gov.in",
+    
+    payment_details: {
+        annual_amount: 6000,
+        installments: 3,
+        installment_amount: 2000
+    },
+    
+    verification_process: {
+        methods: [
+            "Aadhaar number verification",
+            "Mobile number verification",
+            "Land record verification"
+        ],
+        verification_urls: [
+            "https://pmkisan.gov.in/Rpt_BeneficiaryStatus_pub.aspx",
+            "https://fw.pmkisan.gov.in/beneficiarystatus.aspx"
+        ]
+    },
+    
+    research_insights: [
+        {
+            title: "Impact of PM-Kisan on Farmers' Income",
+            source: "https://www.researchgate.net/search/publication?q=PM%20Kisan"
+        }
+    ]
+})
 
 ]
 
