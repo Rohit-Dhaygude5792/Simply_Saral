@@ -13,6 +13,10 @@ const w_welSchema = new Schema({
     max: 2100,
     required: true
   },
+  description:{
+    type:String,
+    required:true
+  },
   government_initiative: {
     ministries_involved: [{
       type: String,
@@ -72,7 +76,8 @@ const w_welSchema = new Schema({
   research_papers: {
     niti_aayog_reports: { type: String },
     national_digital_library: { type: String }
-  }
+  },
+  image:{ type: "array", items: { type: "string" } }
 });
 
 module.exports = mongoose.model("w_wel", w_welSchema);

@@ -620,7 +620,7 @@ a:hover {
 .back-to-top {
     position: fixed;
     bottom: 30px;
-    right: calc(var(--sidebar-width) + 30px); /* Account for sidebar width */
+    right:  30px; /* Account for sidebar width */
     width: 50px;
     height: 50px;
     border-radius: 50%;

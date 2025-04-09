@@ -32,7 +32,7 @@
     
     <div class="nav-group">
       <div class="nav-header">Schemes</div>
-      <a href="/schemes/farmer_Welfare">
+      <a href="/schemes/women_Welfare">
         <div class="nav-item">
           <p><i class="fas fa-book"></i>All Schemes</p>
         </div>
@@ -40,7 +40,7 @@
       <div class="sub-menu">
         <a href="#farmers-scheme">
           <div class="nav-item active">
-            <p><%= data.title %></p>
+            <p><%= data.scheme_name%></p>
           </div>
         </a>
       </div>
@@ -74,44 +74,16 @@
       <section class="hero-section animate-fade-in">
         <img src="#" class="hero-image">
         <div class="hero-overlay">
-          <h1 class="hero-title"><%=data.title %></h1>
+          <h1 class="hero-title"><%=data.scheme_name %></h1>
           <p class="hero-subtitle">
-            Supporting Womens across India with direct income support to supplement their financial needs & necessities in day to day life.
+            Supporting Womens across India with direct various initiatives to supplement their financial needs & providing opportunities to get their dreams
           </p>
           <a href=<%= data.resources.official_links.main_website %> class="cta-button">
             <i class="fas fa-file-signature"></i> Apply Now
           </a>
         </div>
       </section>
-      
-      <!-- Key Info Cards -->
-      <section class="key-info-section animate-slide-up">
-        <div class="scheme-info-card">
-          <div class="scheme-info-grid">
-            <div class="info-item">
-              <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
-              <h4>DURATION</h4>
-              <p>Ongoing</p>
-            </div>
-            <div class="info-item">
-              <div class="info-icon"><i class="fas fa-rupee-sign"></i></div>
-              <h4>AMOUNT</h4>
-              <p>₹6,000/year</p>
-            </div>
-            <div class="info-item">
-              <div class="info-icon"><i class="fas fa-file-alt"></i></div>
-              <h4>APPLY FROM</h4>
-              <p>January 1, 2025</p>
-            </div>
-            <div class="info-item">
-              <div class="info-icon"><i class="fas fa-hourglass-end"></i></div>
-              <h4>LAST DATE</h4>
-              <p>April 30, 2025</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
+
       <!-- About Section -->
       <section class="section animate-fade-in">
         <div class="section-header">
@@ -123,7 +95,7 @@
         <div class="about-section" style="display: grid; grid-template-columns: 3fr 2fr; gap: calc(var(--space-unit) * 4); align-items: center;">
           <div>
             <p>
-            <!-- <------------> 
+              <%= data.description %>
             </p>
             <ul class="custom-list">
               <% data.government_initiative.objectives.forEach((benefit) => {%>
@@ -131,7 +103,7 @@
               <% }); %>
              </ul>
           </div>
-          <img src="/Image/farmer_working_in_field.jpg" alt="Farmers working in field" class="about-image" style="width:100%; border-radius: var(--border-radius-md); box-shadow: var(--shadow-md); transition: transform 0.3s;">
+          <img src="/Image/women_welf/women-emp.webp" alt="women emp" class="about-image" style="width:100%; border-radius: var(--border-radius-md); box-shadow: var(--shadow-md); transition: transform 0.3s;">
         </div>
       </section>
       
@@ -193,23 +165,7 @@
                     </tr>
                     <tr>
                     <td>2</td>
-                    <td>Land Records</td>
-                    <td>
-                        <img src="https://web.landeed.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmh_8a_sample_image.2850df09.png&w=3840&q=75" alt="Land Records" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
-                    </td>
-                    <td><a href="https://web.landeed.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmh_8a_sample_image.2850df09.png&w=3840&q=75" target="_blank">Site</a></td>
-                    
-                    <td>
-                        <a href="https://www.youtube.com/watch?v=qQo8H2_OYwo&pp=ygUraG93IHRvIGZpbmQgb2xkIGxhbmQgcmVjb3JkcyBpbiBtYWhhcmFzaHRyYQ%3D%3D" target="_blank">
-                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
-                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                        </svg>
-                        </a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>3</td>
-                    <td>Bank Account Details</td>
+                    <td>Bank Account Details ( In case of finance support related schemes )</td>
                     <td>
                         <img src="https://qph.cf2.quoracdn.net/main-qimg-27cac10b16038f02cd1870e186698bfc-lq" alt="Bank Account Details" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
                     </td>
@@ -223,15 +179,15 @@
                     </td>
                     </tr>
                     <tr>
-                    <td>4</td>
-                    <td>Mobile Number</td>
+                    <td>3</td>
+                    <td>Birth Certificate </td>
                     <td>
                         <img src="https://imgs.search.brave.com/EKXQmPNJW788PabxuGMnVz__KfbBG27f8fGbLmkbzBA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93ZWJj/ZG4uY2FsbGhpcHBv/LmNvbS9ibG9nL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA3/L0luZGlhbi1tb2Jp/bGUtbnVtYmVyLWV4/YW1wbGUuanBn" alt="Mobile Number" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
                     </td>
                     <td><a href="https://imgs.search.brave.com/EKXQmPNJW788PabxuGMnVz__KfbBG27f8fGbLmkbzBA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93ZWJj/ZG4uY2FsbGhpcHBv/LmNvbS9ibG9nL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA3/L0luZGlhbi1tb2Jp/bGUtbnVtYmVyLWV4/YW1wbGUuanBn" target="_blank">Site</a></td>
                    
                     <td>
-                        <a href="https://www.youtube.com/watch?v=ifQQ0RjzXWk&pp=ygUXSG93IHRvIGdldCBuZXcgc2ltIGNhcmTSBwkJTwkBhyohjO8%3D" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=0cEQC3drKBA" target="_blank">
                         <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
                             <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                         </svg>
@@ -352,10 +308,10 @@
             </div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">I haven't received my installment. What should I do?</div>
+            <div class="faq-question">I haven't received benefits of scheme. What should I do?</div>
             <div class="faq-answer">
               <p>
-                Check your application status online first. Common reasons for delayed payments include pending verification, bank account issues, or incorrect details. You can also contact your local municipal office or call the <%= data.scheme_name %> helpline at <%= data.contact_information.ministry_contact%>.
+                Check your application status by visiting the local authorities or online sites if applied online. You can also contact your local municipal office or call the <%= data.scheme_name %> helpline at <%= data.contact_information.ministry_contact%>.
               </p>
             </div>
           </div>
@@ -365,8 +321,8 @@
     </div>
   </main>
   
-  <!-- Footer -->
-  <footer class="footer">
+// Footer 
+<footer class="footer">
     <div class="footer-container">
       <div class="footer-grid">
         <div class = footer-info>
@@ -384,7 +340,7 @@
         <div>
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-links">
-            <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li class="footer-link-item"><a href="/" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a></li>
             <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> About Us</a></li>
             <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Services</a></li>
             <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
@@ -393,10 +349,10 @@
         <div>
           <h3 class="footer-heading">Other Schemes</h3>
           <ul class="footer-links">
-            <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> PM Fasal Bima Yojana</a></li>
- <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Kisan Credit Card</a></li>
-            <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Soil Health Card</a></li>
-            <li class="footer-link-item"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> PM Kisan Maan Dhan Yojana</a></li>
+ <li class="footer-link-item"><a href="/schemes/secondary_Education" class="footer-link"><i class="fas fa-chevron-right"></i> Secondary Education</a></li>
+ <li class="footer-link-item"><a href="/schemes/higher_Education" class="footer-link"><i class="fas fa-chevron-right"></i> Higher Education</a></li>
+            <li class="footer-link-item"><a href="/schemes/women_Welfare" class="footer-link"><i class="fas fa-chevron-right"></i> Women-Welfare</a></li>
+            <li class="footer-link-item"><a href="/schemes/farmer_Welfare" class="footer-link"><i class="fas fa-chevron-right"></i> Farmer-Welfare</a></li>
           </ul>
         </div>
         <div>
@@ -415,19 +371,19 @@
     </div>
   </footer>
   
-  <!-- Back to Top Button -->
+
   <div class="back-to-top" id="backToTop">
     <i class="fas fa-arrow-up"></i>
   </div>
   
-  <!-- Full-screen Image Modal -->
+ 
   <div id="imageModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImage">
     <div id="caption" class="modal-caption"></div>
   </div>
   
-  <!-- JavaScript for Interactivity -->
+
  <script src="/js/sep_scheme.js"></script>
 </body>
 </html>

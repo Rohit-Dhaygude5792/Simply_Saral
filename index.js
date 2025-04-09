@@ -7,6 +7,9 @@ const ejs = require("ejs");
 const ejsMate = require("ejs-mate"); 
 const farmer_Schemes_Model=require("./model/farmer_Schemes_Model.js");   
 const women_Wel_Model=require("./model/women_Welf_Model.js");
+const higher_Education=require("./model/higher_Education_Model.js");
+const secondary_Education=require("./model/secondary_Education.js");
+const primary_Education=require("./model/primary_Education.js");
 
 app.engine("ejs", ejsMate); 
 app.set("view engine", "ejs"); 
@@ -26,11 +29,7 @@ main()
 
 
 app.get("/", (req, res) => {
-    res.render("./pages/home.ejs");
-});
-
-app.get("/login", (req, res) => {
-    res.render("./pages/login.ejs");
+    res.render("./pages/new_home.ejs");
 });
 
 app.get("/schemes/:scheme",async (req,res)=>{
@@ -44,29 +43,29 @@ app.get("/schemes/:scheme",async (req,res)=>{
    else if(scheme=="women_Welfare"){
     const data=await women_Wel_Model.find({});
     const name="Women's Welfare Scheme";
-    res.render("./pages/women_Scheme",{data,name});
+    res.render("./pages/women_Scheme.ejs",{data,name});
    }
-   else{
-    res.send("Error ");
+   else if(scheme=="higher_Education"){
+    const data=await higher_Education.find({});
+    const name="Higher Education Scheme";
+    res.render("./pages/higher_Edu.ejs",{data,name});
+   }
+   else if(scheme=="primary_Education"){
+    const data=await primary_Education.find({});
+    const name="Primary Education Scheme";
+    res.render("./pages/primary_Edu.ejs",{data,name});
+   }
+   else if(scheme=="secondary_Education"){
+    const data=await secondary_Education.find({});
+    const name="Secondary Education Scheme";
+    res.render("./pages/secondary_Edu.ejs",{data,name});
    }
 });
 
 app.get("/schemes/farmer_Welfare/:id",async (req,res)=>{
     const {id}=req.params;
     const data=await farmer_Schemes_Model.findById(id);
-    console.log(data);
-    const name="Farmer_Welfare Scheme";
-    let descrp="";
-    let link="";
-    if(data.title=="Pradhan Mantri Fasal Bima Yojana (PMFBY)"){
-         descrp="The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a Central Sector scheme with 100% funding from the Government of India. The scheme aims to supplement the financial needs of small and marginal farmers in procuring various inputs to ensure proper crop health and appropriate yields.Under the scheme, income support of ₹6,000 per year is provided to all landholding farmer families across the country in three equal installments of ₹2,000 every four months. The fund is directly transferred to the bank accounts of the beneficiaries.";
-         link="https://pmfby.gov.in/";
-        }
-    else if(data.title=="Kisan Credit Card (KCC) Scheme – A Comprehensive Guide"){
-            descrp="The Kisan Credit Card (KCC) Scheme is an initiative by the Government of India aimed at providing timely and affordable credit to farmers. Introduced in 1998 by the Reserve Bank of India (RBI) and the National Bank for Agriculture and Rural Development (NABARD), the scheme helps farmers meet their short-term credit needs for agricultural and allied activities.";
-            link="https://sbi.co.in/web/agri-rural/agriculture-banking/crop-loan/kisan-credit-card";
-           }
-    res.render("./pages/farm_sep_scheme.ejs",{data,name,descrp,link});
+    res.render("./pages/farm_sep_scheme.ejs",{data});
 
 })
 
@@ -76,6 +75,30 @@ app.get("/schemes/women_Welfare/:id",async (req,res)=>{
     res.render("./pages/women_sep_scheme.ejs",{data});
 
 })
+
+app.get("/schemes/higher_Education/:id",async (req,res)=>{
+    const {id}=req.params;
+    const data=await higher_Education.findById(id);
+    res.render("./pages/higher_sep_scheme.ejs",{data});
+})
+
+app.get("/schemes/secondary_Education/:id",async (req,res)=>{
+    const {id}=req.params;
+    const data=await secondary_Education.findById(id);
+    res.render("./pages/secondary_sep_scheme.ejs",{data});
+
+})
+
+app.get("/login", (req, res) => {
+    res.render("./pages/login_Page.ejs");
+});
+
+app.get("/management", (req, res) => {
+    res.render("./pages/ManagementPage.ejs");
+});
+app.get("/signup", (req, res) => {
+    res.render("./pages/SignUpPage.ejs");
+});
 
 
 app.post("/login", (req, res) => {

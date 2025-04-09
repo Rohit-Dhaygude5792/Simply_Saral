@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Government Documentation Portal</title>
+  <title>Secondary-Education</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,7 +47,7 @@
       <div class="nav-item active">📚 <%= name %></div>
       <div class="sub-menu">
         <% for (let scheme of data) {%>
-            <a href="/schemes/women_Welfare/<%=scheme._id%>"><div class="nav-item"><%=scheme.scheme_name%></div></a>
+            <a href="/schemes/secondary_Education/<%=scheme._id%>"><div class="nav-item"><%=scheme.title%></div></a>
             <% }%>
       </div>
     </div>
@@ -68,10 +68,10 @@
     <!-- CAROUSEL / USER DASHBOARD -->
     <div class="user-dashboard">
       <div class="carousel">
-        <div class="carousel-slide active" style="background-image: url('/Image/women_welf/beti_Bachao.jpg')"></div>
-        <div class="carousel-slide" style="background-image: url('/Image/women_welf/ladki_bahin.jpg')"></div>
-        <div class="carousel-slide" style="background-image: url('/Image/women_welf/swadhar_grih.jpg')"></div>
-        <div class="carousel-slide" style="background-image: url('/Image/women_welf/women-emp.webp')"></div>
+        <div class="carousel-slide active" style="background-image: url('/Image/secondary_Edu/RMSA.jpg')"></div>
+        <div class="carousel-slide " style="background-image: url('/Image/secondary_Edu/NMMS.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/Image/secondary_Edu/SSA.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/Image/secondary_Edu/vocational.jpg')"></div>
       </div>
     </div>
     
@@ -79,10 +79,9 @@
     <% data.forEach((scheme)=>{%>
     <div class="scheme-card">
       <div class="scheme-card-header">
-        <h3><%=scheme.scheme_name%></h3>
+        <h3><%=scheme.title%></h3>
         <div class="scheme-meta">
-          <span class="scheme-category"><%=name%></span> |
-          <span class="scheme-deadline">Lauched Year: <%=scheme.launch_year%></span>
+          | <span class="scheme-category"><%=name%></span> |
         </div>
       </div>
       <div class="scheme-card-body">
@@ -90,12 +89,12 @@
         <div class="scheme-benefits">
             <h4>Benefits:</h4>
             <ul>
-                <%scheme.government_initiative.objectives.forEach((objective)=> {%>
-                <li>✅ <%=objective%></li>
+              <%scheme.benefits.forEach((benefit) =>{%>
+                <li>✅ <%=benefit%></li>
                 <%})%>
-            </ul>
+             </ul>
         </div>
-        <a href="/schemes/women_Welfare/<%=scheme._id%>" class="action-btn">Read More</a>
+        <a href="/schemes/secondary_Education/<%=scheme._id%>" class="action-btn">Read More</a>
       </div>
     </div>
     <% } )%>

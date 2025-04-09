@@ -2,6 +2,7 @@ const data2_women = [
   {
     scheme_name: "Beti Bachao Beti Padhao (BBBP)",
     launch_year: 2015,
+    description:"hello",
     government_initiative: {
       ministries_involved: [
         "Ministry of Women & Child Development",
@@ -65,6 +66,7 @@ const data2_women = [
   {
     scheme_name: "Ladki Bahin Yojana (Mukhya Mantri Mazi Ladki Bahin Yojana)",
     launch_year: 2024,
+    description:"hello",
     government_initiative: {
       ministries_involved: ["Maharashtra Government"],
       objectives: [

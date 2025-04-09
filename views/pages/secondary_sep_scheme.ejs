@@ -32,7 +32,7 @@
     
     <div class="nav-group">
       <div class="nav-header">Schemes</div>
-      <a href="/schemes/farmer_Welfare">
+      <a href="/schemes/secondary_Education">
         <div class="nav-item">
           <p><i class="fas fa-book"></i>All Schemes</p>
         </div>
@@ -72,20 +72,18 @@
     <div class="container">
       <!-- Hero Section -->
       <section class="hero-section animate-fade-in">
-        <img src="<%= data.images[0] %>" class="hero-image">
+        <img src=<%= data.image %> class="hero-image">
         <div class="hero-overlay">
           <h1 class="hero-title"><%=data.title %></h1>
           <p class="hero-subtitle">
-            Supporting farmers across India with direct income support to supplement their financial needs for agricultural & necessities.
+            Secondary education schemes bridge the gap between aspiration and opportunity, empowering students with access, quality, and support for a brighter future.
           </p>
-          <a href=<%= data.important_links[0].url %> class="cta-button">
+          <a href=<%= data.importantLinks[0].url %> class="cta-button">
             <i class="fas fa-file-signature"></i> Apply Now
           </a>
         </div>
       </section>
-      
-      <!-- Key Info Cards -->
-      
+    
       <!-- About Section -->
       <section class="section animate-fade-in">
         <div class="section-header">
@@ -100,12 +98,14 @@
               <%= data.description %>
             </p>
             <ul class="custom-list">
-              <% data.benefits.forEach((benefit) => {%>
-                  <li><%=benefit%></li>
-              <% }); %>
+              <ul>
+                <% data.benefits.forEach((benefit) => {%>
+                    <li><%=benefit%></li>
+                <% }); %>
+             </ul>
              </ul>
           </div>
-          <img src="<%= data.images[0] %>" alt="Farmers working in field" class="about-image" style="width:100%; border-radius: var(--border-radius-md); box-shadow: var(--shadow-md); transition: transform 0.3s;">
+          <img src=<%= data.image%> alt="secondary_Edu" class="about-image" style="width:100%; border-radius: var(--border-radius-md); box-shadow: var(--shadow-md); transition: transform 0.3s;">
         </div>
       </section>
       
@@ -115,19 +115,20 @@
           <div class="section-icon"><i class="fas fa-check-circle"></i></div>
           <h2>Eligibility Criteria</h2>
         </div>
-        <p>The following farmers are eligible for the <%=data.title%>:</p>
+        <p>The following students are eligible for the <%=data.title%>:</p>
         <ul class="custom-list">
-            <li> The minimum age of Applicant should be  : : <%=data.eligibility_criteria.age_min%></li>
-            <li> The maximum age of Applicant should be : : <%=data.eligibility_criteria.age_max%></li>
-            <li> The minimum Land Requirement is  : : <%=data.eligibility_criteria.land_requirement_acres%> Acres</li>
+          <li><%= data.eligibilityCriteria.domicile %></li>
+          <li><%= data.eligibilityCriteria.academicQualification %></li>
+          <li><%= data.eligibilityCriteria.ageLimit %></li>
+          <li><%= data.eligibilityCriteria.parentalIncomeLimit %></li>
+          <li><%= data.eligibilityCriteria.attendanceRequirement%></li>
         </ul>
-        <p>Certain categories of farmers are NOT eligible for this scheme:</p>
+        <p>Certain categories of students are NOT eligible for this scheme:</p>
         <ul class="custom-list">
-          <li>Institutional landholders</li>
-          <li>Former and present holders of constitutional posts</li>
-          <li>Professionals like doctors, engineers, lawyers, chartered accountants, and architects</li>
-          <li>Current or former Ministers, MPs, MLAs, MLCs, Mayors, and Chairman of District Panchayats</li>
-          <li>Individuals paying income tax in the previous assessment year</li>
+          <li>Only government and government-aided school students qualify.</li>
+          <li>Students from Families Exceeding the Income Limit</li>
+          <li>Students Who Do Not Meet Academic Requirements</li>
+          <li>NMMS, SSA, RMSA, Vocational Training: Aadhaar, income proof, domicile certificate, caste certificate (if applicable), and academic records are mandatory.</li>
         </ul>
       </section>
       
@@ -145,14 +146,15 @@
                     <th>Sr. No.</th>
                     <th>Document Name</th>
                     <th>Sample Image</th>
-                    <th>Link</th>
+                    <th>Official Link</th>
                     <th>Video Guide</th>
                     </tr>
                 </thead>
                 <tbody>
+                  <!-- <---Adhar ----> 
                     <tr>
                     <td>1</td>
-                    <td>Aadhaar Card</td>
+                    <td>Aadhaar Card ( Identity Proof / Address Proof )</td>
                     <td>
                         <img src="https://imgs.search.brave.com/W4R_sLGAANUT-p8xguHTB7zHPBEJoC9RV7O6GC2foNY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9naXRo/dWIuY29tL0RldmFu/c2g4MC9BYWRoYWFy/LVVJRC1NYXNraW5n/LVRvb2wvcmF3L21h/c3Rlci9JbWcvQWFk/aGFhcl9sZXR0ZXJf/bGFyZ2UucG5n" alt="Aadhaar Card" class="clickable-image" data-fullsrc="images/aadharformat.jpeg" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
                     </td>
@@ -168,14 +170,14 @@
                     </tr>
                     <tr>
                     <td>2</td>
-                    <td>Land Records</td>
+                    <td>Income Certificate</td>
                     <td>
-                        <img src="https://web.landeed.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmh_8a_sample_image.2850df09.png&w=3840&q=75" alt="Land Records" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
+                        <img src="https://dukaan.b-cdn.net/1000x1000/webp/415937/51251f5d-21d6-4400-bc7a-5a9bfb58cb6c.png" alt="Land Records" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
                     </td>
-                    <td><a href="https://web.landeed.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmh_8a_sample_image.2850df09.png&w=3840&q=75" target="_blank">Site</a></td>
+                    <td><a href="https://dukaan.b-cdn.net/1000x1000/webp/415937/51251f5d-21d6-4400-bc7a-5a9bfb58cb6c.png" target="_blank">Site</a></td>
                     
                     <td>
-                        <a href="https://www.youtube.com/watch?v=qQo8H2_OYwo&pp=ygUraG93IHRvIGZpbmQgb2xkIGxhbmQgcmVjb3JkcyBpbiBtYWhhcmFzaHRyYQ%3D%3D" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=GPk3jiaiSz4" target="_blank">
                         <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
                             <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                         </svg>
@@ -184,37 +186,55 @@
                     </tr>
                     <tr>
                     <td>3</td>
-                    <td>Bank Account Details</td>
+                    <td>Domicile Certificate</td>
                     <td>
-                        <img src="https://qph.cf2.quoracdn.net/main-qimg-27cac10b16038f02cd1870e186698bfc-lq" alt="Bank Account Details" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
+                        <img src="https://govtsevaa.com/wp-content/uploads/2021/03/Domicile-Certificate-1-735x1024.jpg" alt="Bank Account Details" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
                     </td>
-                    <td><a href="https://qph.cf2.quoracdn.net/main-qimg-27cac10b16038f02cd1870e186698bfc-lq" target="_blank">Site</a></td>
+                    <td><a href="https://govtsevaa.com/wp-content/uploads/2021/03/Domicile-Certificate-1-735x1024.jpg">Site</a></td>
                     <td>
-                        <a href="https://www.youtube.com/results?search_query=how+to+open+new+bank+account+online" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=HrZM8N3YmAw" target="_blank">
                         <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
                             <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                         </svg>
                         </a>
                     </td>
                     </tr>
+
                     <tr>
-                    <td>4</td>
-                    <td>Mobile Number</td>
-                    <td>
-                        <img src="https://imgs.search.brave.com/EKXQmPNJW788PabxuGMnVz__KfbBG27f8fGbLmkbzBA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93ZWJj/ZG4uY2FsbGhpcHBv/LmNvbS9ibG9nL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA3/L0luZGlhbi1tb2Jp/bGUtbnVtYmVyLWV4/YW1wbGUuanBn" alt="Mobile Number" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
-                    </td>
-                    <td><a href="https://imgs.search.brave.com/EKXQmPNJW788PabxuGMnVz__KfbBG27f8fGbLmkbzBA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93ZWJj/ZG4uY2FsbGhpcHBv/LmNvbS9ibG9nL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA3/L0luZGlhbi1tb2Jp/bGUtbnVtYmVyLWV4/YW1wbGUuanBn" target="_blank">Site</a></td>
-                   
-                    <td>
-                        <a href="https://www.youtube.com/watch?v=ifQQ0RjzXWk&pp=ygUXSG93IHRvIGdldCBuZXcgc2ltIGNhcmTSBwkJTwkBhyohjO8%3D" target="_blank">
-                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
-                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                        </svg>
-                        </a>
-                    </td>
-                    </tr>
+                      <td>4</td>
+                      <td>Caste Certificate</td>
+                      <td>
+                          <img src="https://www.thestatesman.com/wp-content/uploads/2022/10/sample_certificate-1.jpg" target="_blank" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
+                      </td>
+                      <td><a href="https://www.thestatesman.com/wp-content/uploads/2022/10/sample_certificate-1.jpg" target="_blank">Site</a></td>
+                      <td>
+                          <a href="https://www.youtube.com/results?search_query=how+to+apply+for+caste+certificate+online+in+maharashtra" target="_blank">
+                          <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
+                              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                          </svg>
+                          </a>
+                      </td>
+                      </tr>
+                      <!-- bank -->
+                      <tr>
+                        <td>5</td>
+                        <td>Bank Account Details</td>
+                        <td>
+                            <img src="https://qph.cf2.quoracdn.net/main-qimg-27cac10b16038f02cd1870e186698bfc-lq" alt="Bank Account Details" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
+                        </td>
+                        <td><a href="https://qph.cf2.quoracdn.net/main-qimg-27cac10b16038f02cd1870e186698bfc-lq" target="_blank">Site</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/results?search_query=how+to+open+new+bank+account+online" target="_blank">
+                            <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                            </a>
+                        </td>
+                        </tr>
+
+                        <!-- passsport-size -->
                     <tr>
-                    <td>5</td>
+                    <td>6</td>
                     <td>Passport-sized Photograph</td>
                     <td>
                         <img src="https://imgs.search.brave.com/AivYFasgW5dBW4VPSawWLdxoG-YRfXTZIl9z1dvK_I8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9waG90/b2dvdi1jb20uYWth/bWFpemVkLm5ldC9l/eGFtcGxlcy91cy1w/YXNzcG9ydC1waG90/by9sYW5kbWFya3Mt/VVMud2VicA" alt="Passport-sized Photograph" class="clickable-image" data-fullsrc="https://via.placeholder.com/600" style="width:60px; height:40px; object-fit: cover; cursor: pointer; border-radius: 4px;">
@@ -222,25 +242,7 @@
                     <td><a href=https://imgs.search.brave.com/AivYFasgW5dBW4VPSawWLdxoG-YRfXTZIl9z1dvK_I8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9waG90/b2dvdi1jb20uYWth/bWFpemVkLm5ldC9l/eGFtcGxlcy91cy1w/YXNzcG9ydC1waG90/by9sYW5kbWFya3Mt/VVMud2VicA target="_blank">Site</a></td>
            
                     <td>
-                        <a href="https://youtu.be/photoguide" target="_blank">
-                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
-                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                        </svg>
-                        </a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>6</td>
-                    <td>Video Tutorial</td>
-                    <td>
-                        <p>-</p>
-                    </td>
-                    <td><a href="https://www.youtube.com/watch?v=XLn59XmCYaQ&pp=ygUYa2lzYW4gY3JlZGl0IGNhcmQgc2NoZW1l" target="_blank">Site</a></td>
-                    
-                    <td>
-                        <a href=<%= data.important_links[1].url %> target="_blank">
-                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" width="50" height="30">
-                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        
                         </svg>
                         </a>
                     </td>
@@ -270,25 +272,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Offline-steps</td>
+            <tr><td>Steps</td>
                 <td></td>
             </tr>
-            <% for( let index = 0; index < data.application_process.offline_steps.length; index++ ) { %>
+            <% for( let index = 0; index < data.applicationProcess.steps.length; index++ ) { %>
                 <tr>
                   <td><%= index+1 %></td>
-                  <td><%=data.application_process.offline_steps[index] %></td>
+                  <td><%=data.applicationProcess.steps[index] %></td>
                 </tr>
-            <% } %>
-            <tr><td>Online-steps</td>
-              <td></td>
-          </tr>
-            <% for( let index = 0; index < data.application_process.online_steps.length; index++ ) { %>
-              <tr>
-                <td><%= index+1%></td>
-                <td><%=data.application_process.online_steps[index] %></td>
-              </tr>
-          <% } %>
-            
+            <% } %>          
           </tbody>
         </table>
         
@@ -309,43 +301,36 @@
         </div>
         <div class="faq-container">
           <div class="faq-item">
-            <div class="faq-question">How do I check my <%=data.title%> status?</div>
+            <div class="faq-question">What is a secondary education scheme?</div>
             <div class="faq-answer">
               <p>
-                You can check your <%=data.title%> application status by visiting the official website <%=data.important_links[0].title%> and clicking on "Beneficiary Status." Enter your Aadhaar number or  registration number to view your status.
+                A government or private initiative that provides financial aid, infrastructure, scholarships, or support to improve secondary education.
               </p>
             </div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">What if my land records are not updated?</div>
+            <div class="faq-question">Who is eligible for secondary education schemes?</div>
             <div class="faq-answer">
               <p>
-                You should first approach your local revenue office to update your land records. Once updated, you can apply for the  scheme with the revised documents.
-              </p>
+                Eligibility varies by scheme but may depend on factors such as income level, gender, caste/category (in some countries), disability status, and academic performance.
+</p>
             </div>
           </div>
+
           <div class="faq-item">
-            <div class="faq-question">I haven't received my installment. What should I do?</div>
+            <div class="faq-question">Are secondary education schemes available for all students?</div>
             <div class="faq-answer">
               <p>
-                Check your application status online first. Common reasons for delayed payments include pending verification, bank account issues, or incorrect details. You can also contact your local agriculture office or call the <%= data.title %> helpline at <%= data.helpline_numbers.
-toll_free %>.
-              </p>
+                Many schemes target economically weaker sections, girls, differently-abled students, or students from marginalized communities.
+</p>
             </div>
           </div>
+
           <div class="faq-item">
-            <div class="faq-question">Can I update my bank account details?</div>
+            <div class="faq-question">What financial assistance is provided under these schemes?</div>
             <div class="faq-answer">
               <p>
-                Yes, you can update your bank account details by visiting the nearest Common Service Centre (CSC) or by logging into the <%= data.title %> portal using your registered mobile number.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">Are tenant farmers eligible for <%=data.title%>?</div>
-            <div class="faq-answer">
-              <p>
-                No, tenant farmers who do not own the land they cultivate are not eligible for scheme benefits. The scheme is designed for landholding farmers only.
+                Assistance may include scholarships, free books, uniforms, midday meals, hostel facilities, or fee waivers.
               </p>
             </div>
           </div>
@@ -383,6 +368,7 @@ toll_free %>.
         <div>
           <h3 class="footer-heading">Other Schemes</h3>
           <ul class="footer-links">
+        
  <li class="footer-link-item"><a href="/schemes/secondary_Education" class="footer-link"><i class="fas fa-chevron-right"></i> Secondary Education</a></li>
  <li class="footer-link-item"><a href="/schemes/higher_Education" class="footer-link"><i class="fas fa-chevron-right"></i> Higher Education</a></li>
             <li class="footer-link-item"><a href="/schemes/women_Welfare" class="footer-link"><i class="fas fa-chevron-right"></i> Women-Welfare</a></li>
@@ -404,7 +390,6 @@ toll_free %>.
       </div>
     </div>
   </footer>
-  
   
   <!-- Back to Top Button -->
   <div class="back-to-top" id="backToTop">
